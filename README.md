@@ -5,7 +5,7 @@ nodegitmon is scheduling switch web pages(such as HTML, CSS and JavaScript) of w
 
 If there are several web sites need to display in a web server, nodegitmon could replace web site periodically.
 
->    nodegitmon can be used to demo large of different web sites schedulely.
+>    nodegitmon can be used to demo large of different web sites on schedule.
 >    For example, If you want to display web site "A" 10 minutes then show web site "B" 3 minutes, finally, web site "C" render 30 minutes, nodegitmon would be the choice.
 
 It can completely change web content by checking out git branches. 
@@ -152,6 +152,7 @@ Set the displaying time of demo web site.
     //display 30 seconds
 
 Set next displaying web site.
+    
     const nextCheckoutBranch "A"
 
 ### Commit the other web site
