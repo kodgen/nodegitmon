@@ -31,15 +31,19 @@ nodegitmon require domain knowledge of git
 # Installation
 
 nodegitmon is recommended clone github repository. 
+
+    
     git clone https://github.com/kodgen/nodegitmon.git
 
 # Example
 
 See
-    [example](http://github.com/kodgen/nodegitmon/example/)
+    [example](http://github.com/kodgen/nodegitmon/tree/master/example/)
 
 Run the example
+    
     ./example.sh
+    
     nodemon app.js
 
 # Usage
@@ -54,11 +58,11 @@ Run the example
 - git commit -m "Web site B"
 - nodemon app.js
 
-# More detial
-## Create a git repository
+## More detail
+### Create a git repository
     git init 
 
-## Create a node.js file "app.js" for web site A
+### Create a node.js file "app.js" for web site A
 ```js
 const http = require('http');
 const fs = require('fs');
@@ -80,7 +84,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, hostname, () => {
-  console.log(`nodemon page running at http://${hostname}:${port}/`);
+  console.log('Web site A running at http://${hostname}:${port}/');
 });
 ```
 
@@ -92,10 +96,10 @@ It require add these lines to call nodegitmon
 And add this line to refresh the browser
     res.setHeader('refresh',common.refreshTime);
 
-## Clone nodegitmon github repository 
+### Clone nodegitmon github repository 
     git clone https://github.com/kodgen/nodegitmon.git
 
-## Set nodegitmon/common.js
+### Set nodegitmon/common.js
 Set the displaying time of demo web site.
 
     const refreshTime 30
@@ -104,18 +108,18 @@ Set the displaying time of demo web site.
 Set next displaying web site.
     const nextCheckoutBranch "B"
 
-## Commit your web site 
+### Commit your web site 
     git add .
     git commit -m "Web site A"
 
-## Rename current git branch
+### Rename current git branch
     git branch -m A
 
-## Create lots of git branches (Depending on how many web sites requiring display)
+### Create lots of git branches (Depending on how many web sites requiring display)
     git branch B
     git checkout B
 
-## Modify the node.js file "app.js" for web site B
+### Modify the node.js file "app.js" for web site B
 ```js
 const http = require('http');
 const fs = require('fs');
@@ -137,11 +141,11 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, hostname, () => {
-  console.log(`nodemon page running at http://${hostname}:${port}/`);
+  console.log('Web site B running at http://${hostname}:${port}/');
 });
 ```
 
-## Set nodegitmon/common.js
+### Set nodegitmon/common.js
 Set the displaying time of demo web site.
 
     const refreshTime 30
@@ -150,17 +154,18 @@ Set the displaying time of demo web site.
 Set next displaying web site.
     const nextCheckoutBranch "A"
 
-## Commit the other web site
+### Commit the other web site
     git add .
     git commit -m "Web site B"
 
 Then run nodemon.
+    
     nodemon [your node app]
 
 ## Note: All file name of JavaScript must the same, such as "app.js" in different web site.    
     For example: nodemon app.js
 
-Please see [example](https://github.com/kodgen/nodegitmon/example)
+Please see [example](https://github.com/kodgen/nodegitmon/tree/master/example)
 
 # License
 

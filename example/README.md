@@ -14,7 +14,11 @@ Running app.js will automaticly check out git branches and switch current web pa
 # Requirement
 
 nodegitmon needs fellowing software.
-    [git][node.js][nodegit][nodemon]
+[git](https://github.com/git/git)
+[node.js](https://github.com/nodejs/node)
+[nodegit](https://github.com/nodegit/nodegit)
+[nodemon](https://github.com/remy/nodemon)
+
     npm install -g nodemon nodegit
 
 # Setting
